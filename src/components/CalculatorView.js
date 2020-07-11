@@ -35,7 +35,7 @@ class CalculatorView extends Component {
                         <input type="number" id="goalWeight" min="1"></input>
                         <p>OR</p>
                         <label for="goalReps">Enter Goal Reps</label>
-                        <input type="number" id="goalReps" min="1"></input>
+                        <input type="number" id="goalReps" min="1" max="30"></input>
                     </fieldset>
                 </form>
 
