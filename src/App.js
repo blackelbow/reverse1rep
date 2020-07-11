@@ -79,7 +79,9 @@ class App extends Component {
     var reps=document.getElementById("goalReps")
 
     if (max.value>0 && weight.value>0 && !reps.value>0) {
-        var maxreps = Math.round(((max.value-weight.value)/3)+1);
+        var loss_per_rep=max.value*.03
+        var total_loss=max.value-weight.value
+        var maxreps=Math.round((total_loss/loss_per_rep)+1)
         this.setState ({result: maxreps, modalVisible: true});
     }
     else if (max.value>0 && reps.value>0 && !weight.value>0) {
